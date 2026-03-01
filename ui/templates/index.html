@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Sharp typography: Space Mono for accents, and Inter/Grotesk for body but with bold weights -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AC</div>
+            <div class="nav-links">
+                <a href="#expertise">{{ nav_expertise }}</a>
+                <a href="#projects">{{ nav_work }}</a>
+                <a href="https://www.linkedin.com/in/lacamposm/" class="btn-solid" target="_blank">{{ nav_connect }}</a>
+                <div class="lang-toggle">
+                    <a href="/?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
+                    <span class="separator">/</span>
+                    <a href="/?lang=es" class="{% if current_lang == 'es' %}active{% endif %}">ES</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-up">
+                <div class="availability-badge">
+                    <span class="status-indicator"></span> {{ badge_available }}
+                </div>
+                <h1 class="glitch" data-text="{{ hero_title_1 }}">
+                    {{ hero_title_1 }}<br />
+                    <span class="text-accent">{{ hero_title_2 }}</span>
+                </h1>
+                <p class="tagline">{{ hero_tagline }}</p>
+
+                <div class="cta-group">
+                    <button onclick="document.getElementById('contact-modal').showModal()" class="btn-primary">{{
+                        btn_discuss }} <i class="fa-solid fa-arrow-right"></i></button>
+                    <a href="https://github.com/lacamposm" target="_blank" rel="noopener noreferrer"
+                        class="btn-outline"><i class="fa-brands fa-github"></i> {{ btn_code }}</a>
+                </div>
+
+                <div class="social-proof">
+                    <p>// {{ social_proof }}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="expertise" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>{{ expertise_title }} <br /><span class="text-accent">{{ expertise_subtitle }}</span></h2>
+                <p>{{ expertise_desc }}</p>
+            </div>
+
+            <div class="skills-grid">
+                {% for skill in skills %}
+                <div class="skill-card fade-up">
+                    <div class="card-borders">
+                        <span class="border-top"></span>
+                        <span class="border-right"></span>
+                        <span class="border-bottom"></span>
+                        <span class="border-left"></span>
+                    </div>
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="{{ skill.icon }}"></i></div>
+                        <span class="skill-badge">{{ skill.level }}</span>
+                    </div>
+                    <h3>{{ skill.name }}</h3>
+                    <p>{{ skill.desc }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section fade-up">
+        <div class="container">
+            <div class="cta-box">
+                <h2>{{ cta_title }}</h2>
+                <p>{{ cta_desc }}</p>
+                <a href="https://www.linkedin.com/in/lacamposm/" target="_blank" class="btn-primary">
+                    {{ cta_btn }} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">AC</div>
+                <p>{{ footer_tagline }}</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/lacamposm" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lacamposm/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>{{ footer_rights }}</p>
+        </div>
+    </footer>
+
+    <dialog id="contact-modal" class="contact-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="document.getElementById('contact-modal').close()"><i
+                    class="fa-solid fa-times"></i></button>
+
+            <div id="form-container">
+                <h2>{{ form_title }}</h2>
+                <form id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">{{ form_name }}</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">{{ form_email }}</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">{{ form_message }}</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">{{ form_send }} <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <div id="success-message" style="display: none; text-align: center; padding: 40px 0;">
+                <i class="fa-solid fa-check-circle"
+                    style="font-size: 3rem; margin-bottom: 24px; color: var(--accent);"></i>
+                <h2 style="font-size: 1.5rem; margin-bottom: 16px;">{{ form_success_title }}</h2>
+                <p style="color: var(--text-secondary); font-family: 'Space Mono', monospace; line-height: 1.5;">{{
+                    form_success_desc }}</p>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission stub (for n8n webhook later)
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // This is where you will add the webhook fetch request later.
+
+            // Show success message inside modal
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            this.reset();
+        });
+
+        // Reset modal content when closed
+        document.getElementById('contact-modal').addEventListener('close', function () {
+            document.getElementById('form-container').style.display = 'block';
+            document.getElementById('success-message').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
