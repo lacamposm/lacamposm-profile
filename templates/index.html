@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andres Campos | Cloud & AI Architect</title>
+    <meta name="description"
+        content="I help businesses automate workflows, design resilient backend infrastructure, and deploy production-ready AI systems.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AC.</div>
+            <div class="nav-links">
+                <a href="#expertise">Expertise</a>
+                <a href="#projects">Work</a>
+                <a href="https://www.linkedin.com/in/lacamposm/" class="btn-secondary" target="_blank">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="container hero-content">
+            <div class="hero-text fade-up">
+                <div class="availability-badge">
+                    <span class="pulse-dot"></span> Available for new projects
+                </div>
+                <h1>Architecting Scalable Cloud Solutions <span class="text-gradient">& Intelligent AI Agents.</span>
+                </h1>
+                <p class="tagline">I help engineering teams automate complex workflows, design resilient backend
+                    infrastructure, and deploy production-ready ML systems directly on Google Cloud.</p>
+
+                <div class="cta-group">
+                    <a href="mailto:lacamposm@unal.edu.co" class="btn-primary">Discuss a Project <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://github.com/lacamposm" target="_blank" rel="noopener noreferrer"
+                        class="btn-outline"><i class="fa-brands fa-github"></i> Explore Code</a>
+                </div>
+
+                <div class="social-proof">
+                    <p>Trusted by clients for delivering <strong>reliable</strong> and <strong>high-performance</strong>
+                        systems.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="expertise" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>Specialized <span class="text-variant">Expertise</span></h2>
+                <p>Focused on the intersection of data, cloud, and autonomous agents.</p>
+            </div>
+
+            <div class="skills-grid">
+                {% for skill in skills %}
+                <div class="skill-card fade-up" style="animation-delay: {{ loop.index0 * 0.1 }}s">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="{{ skill.icon }}"></i></div>
+                        <span class="skill-badge">{{ skill.level }}</span>
+                    </div>
+                    <h3>{{ skill.name }}</h3>
+                    <p>{{ skill.desc }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section fade-up">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to scale your infrastructure?</h2>
+                <p>Let's build systems that perform under pressure and scale with your business.</p>
+                <a href="https://www.linkedin.com/in/lacamposm/" target="_blank" class="btn-primary">Connect on LinkedIn
+                    <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">AC.</div>
+                <p>Engineering the future, one node at a time.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/lacamposm" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lacamposm/" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Andres Campos. Building from Bogotá.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple intersection observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
