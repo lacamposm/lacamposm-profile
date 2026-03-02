@@ -18,7 +18,7 @@ translations = {
         "badge_available": "Available for new projects",
         "section_background": "Background & Experience",
         "experience": [
-            {"role": "Data Scientist & ML Engineer", "company": "oeskn", "period": "Present", "desc": "Building AI-driven skincare solutions in a fast-paced startup environment."},
+            {"role": "AI Engineer", "company": "oeskn", "period": "Present", "desc": "Building AI-driven skincare solutions in a fast-paced startup environment."},
             {"role": "Data Scientist", "company": "IGAC", "period": "3 years", "desc": "Applied data science and ML over complex geographical datasets."}
         ],
         "education": [
@@ -67,7 +67,7 @@ translations = {
         "badge_available": "Disponible para nuevos proyectos",
         "section_background": "Trayectoria y Experiencia",
         "experience": [
-            {"role": "Data Scientist & ML Engineer", "company": "oeskn", "period": "Actualmente", "desc": "Construyendo soluciones de skincare impulsadas por IA en un entorno de startup ágil."},
+            {"role": "AI Engineer", "company": "oeskn", "period": "Actualmente", "desc": "Construyendo soluciones de skincare impulsadas por IA en un entorno de startup ágil."},
             {"role": "Data Scientist", "company": "IGAC", "period": "3 años", "desc": "Aplicación de ciencia de datos y machine learning sobre datasets geográficos."}
         ],
         "education": [
