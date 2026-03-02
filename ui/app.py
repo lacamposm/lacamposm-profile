@@ -19,7 +19,7 @@ translations = {
         "section_background": "Background & Experience",
         "experience": [
             {"role": "AI Engineer", "company": "oeskn", "period": "Present", "desc": "Building AI-driven skincare solutions in a fast-paced startup environment."},
-            {"role": "Data Scientist", "company": "IGAC", "period": "3 years", "desc": "Applied data science and ML over complex geographical datasets."}
+            {"role": "Data Scientist", "company": "IGAC", "period": "3 years", "desc": "Designed and implemented ML models for geographic, cadastral, and spatial datasets at Colombia's national geographic institute."}
         ],
         "education": [
             {"degree": "Magister en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
@@ -51,11 +51,11 @@ translations = {
         "skills": [
             {"name": "Data Science & ML", "level": "Expert", "icon": "fa-solid fa-chart-network", "desc": "Applying advanced machine learning algorithms to extract actionable insights from complex datasets."},
             {"name": "AI & Autonomous Agents", "level": "Expert", "icon": "fa-solid fa-brain", "desc": "Building robust, stateful multi-agent applications and cognitive architectures using LangGraph and its ecosystem."},
-            {"name": "Data Architecture", "level": "Advanced", "icon": "fa-solid fa-database", "desc": "Designing Data Lakes and managing data governance and analytics platforms with Databricks Unity Catalog."},
             {"name": "Workflow Automation", "level": "Expert", "icon": "fa-solid fa-cogs", "desc": "Automating business processes and data pipelines using n8n and Python scripting."},
-            {"name": "Academic Instruction", "level": "Master's Professor", "icon": "fa-solid fa-graduation-cap", "desc": "Teaching advanced concepts in Data Science, Machine Learning, and AI at the postgraduate level."},
+            {"name": "Data Architecture", "level": "Advanced", "icon": "fa-solid fa-database", "desc": "Designing Data Lakes and managing data governance and analytics platforms with Databricks Unity Catalog."},
             {"name": "Backend Development", "level": "Advanced", "icon": "fa-brands fa-python", "desc": "Building robust, secure, and performant backend services and APIs with Python and FastAPI."},
             {"name": "GCP / Infrastructure", "level": "Intermediate", "icon": "fa-brands fa-google", "desc": "Designing and deploying highly available, scalable infrastructure on Google Cloud Platform to support AI/ML workloads."},
+            {"name": "Academic Instruction", "level": "Master's Professor", "icon": "fa-solid fa-graduation-cap", "desc": "Teaching advanced concepts in Data Science, Machine Learning, and AI at the postgraduate level."},
         ]
     },
     "es": {
@@ -68,7 +68,7 @@ translations = {
         "section_background": "Trayectoria y Experiencia",
         "experience": [
             {"role": "AI Engineer", "company": "oeskn", "period": "Actualmente", "desc": "Construyendo soluciones de skincare impulsadas por IA en un entorno de startup ágil."},
-            {"role": "Data Scientist", "company": "IGAC", "period": "3 años", "desc": "Aplicación de ciencia de datos y machine learning sobre datasets geográficos."}
+            {"role": "Data Scientist", "company": "IGAC", "period": "3 años", "desc": "Diseño e implementación de modelos de ML para datos geográficos, catastrales y espaciales en el instituto geográfico nacional de Colombia."}
         ],
         "education": [
             {"degree": "Magíster en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
@@ -100,11 +100,11 @@ translations = {
         "skills": [
             {"name": "Ciencia de Datos y ML", "level": "Experto", "icon": "fa-solid fa-chart-network", "desc": "Aplicación de algoritmos avanzados de machine learning para extraer insights de datasets complejos."},
             {"name": "IA y Agentes Autónomos", "level": "Experto", "icon": "fa-solid fa-brain", "desc": "Construcción de aplicaciones multi-agente robustas y arquitecturas cognitivas utilizando LangGraph y su ecosistema."},
-            {"name": "Arquitectura de Datos", "level": "Avanzado", "icon": "fa-solid fa-database", "desc": "Diseño de Data Lakes y gobernanza/analítica de datos mediante Databricks Unity Catalog."},
             {"name": "Automatización de Flujos", "level": "Experto", "icon": "fa-solid fa-cogs", "desc": "Automatización de procesos y pipelines de datos utilizando n8n y scripts en Python."},
-            {"name": "Docencia Académica", "level": "Docente de Maestría", "icon": "fa-solid fa-graduation-cap", "desc": "Enseñanza de conceptos avanzados en Ciencia de Datos, Machine Learning e IA a nivel posgrado."},
+            {"name": "Arquitectura de Datos", "level": "Avanzado", "icon": "fa-solid fa-database", "desc": "Diseño de Data Lakes y gobernanza/analítica de datos mediante Databricks Unity Catalog."},
             {"name": "Desarrollo Backend", "level": "Avanzado", "icon": "fa-brands fa-python", "desc": "Construcción de servicios backend robustos, APIs y arquitecturas escalables usando Python y FastAPI."},
             {"name": "GCP / Infraestructura", "level": "Intermedio", "icon": "fa-brands fa-google", "desc": "Diseño y despliegue de infraestructura altamente disponible en Google Cloud para soportar cargas de IA/ML."},
+            {"name": "Docencia Académica", "level": "Docente de Maestría", "icon": "fa-solid fa-graduation-cap", "desc": "Enseñanza de conceptos avanzados en Ciencia de Datos, Machine Learning e IA a nivel posgrado."},
         ]
     }
 }
