@@ -25,7 +25,7 @@
             <div class="logo">AC</div>
             <div class="nav-links">
                 <a href="#expertise">{{ nav_expertise }}</a>
-                <a href="#projects">{{ nav_work }}</a>
+                <a href="#background">{{ nav_work }}</a>
                 <a href="https://www.linkedin.com/in/lacamposm/" class="btn-solid" target="_blank">{{ nav_connect }}</a>
                 <div class="lang-toggle">
                     <a href="/?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
@@ -40,7 +40,9 @@
         <div class="container hero-content">
             <div class="hero-text fade-up">
                 <div class="hero-intro">
-                    <span class="greeting-text" style="font-family: 'Space Mono', monospace; color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 1rem;"><i class="fa-solid fa-code" style="margin-right: 8px;"></i>{{ hero_greeting }}</span>
+                    <span class="greeting-text"
+                        style="font-family: 'Space Mono', monospace; color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 1rem;"><i
+                            class="fa-solid fa-code" style="margin-right: 8px;"></i>{{ hero_greeting }}</span>
                 </div>
                 <div class="availability-badge" style="margin-bottom: 2rem;">
                     <span class="status-indicator"></span> {{ badge_available }}
@@ -89,6 +91,63 @@
                     <p>{{ skill.desc }}</p>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="background" class="background-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>{{ section_background }}</h2>
+                <p>{{ 'My professional and academic foundations.' if current_lang == 'en' else 'Mis bases profesionales
+                    y académicas.' }}</p>
+            </div>
+            <div class="background-grid">
+                <div class="experience-col fade-up">
+                    <h3 class="col-title"><i class="fa-solid fa-briefcase"></i> {{ 'Experience' if current_lang == 'en'
+                        else 'Experiencia' }}</h3>
+                    <div class="timeline">
+                        {% for exp in experience %}
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="period"
+                                    style="font-family: 'Space Mono', monospace; font-size: 0.85rem; color: var(--text-secondary); display: block; margin-bottom: 8px;">{{
+                                    exp.period }}</span>
+                                <h4
+                                    style="font-size: 1.2rem; margin-bottom: 4px; font-family: 'Syncopate', sans-serif;">
+                                    {{ exp.role }}</h4>
+                                <h5
+                                    style="color: var(--primary); margin-bottom: 12px; font-weight: 400; font-size: 1rem;">
+                                    {{ exp.company }}</h5>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem;">{{ exp.desc }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="education-col fade-up">
+                    <h3 class="col-title"><i class="fa-solid fa-graduation-cap"></i> {{ 'Education' if current_lang ==
+                        'en' else 'Formación' }}</h3>
+                    <div class="timeline">
+                        {% for edu in education %}
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="period"
+                                    style="font-family: 'Space Mono', monospace; font-size: 0.85rem; color: var(--text-secondary); display: block; margin-bottom: 8px;">{{
+                                    edu.year }}</span>
+                                <h4
+                                    style="font-size: 1.2rem; margin-bottom: 4px; font-family: 'Syncopate', sans-serif;">
+                                    {{ edu.degree }}</h4>
+                                <h5
+                                    style="color: var(--primary); margin-bottom: 12px; font-weight: 400; font-size: 1rem;">
+                                    {{ edu.institution }}</h5>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </section>

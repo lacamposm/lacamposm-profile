@@ -16,6 +16,15 @@ translations = {
         "nav_work": "Work",
         "nav_connect": "Connect",
         "badge_available": "Available for new projects",
+        "section_background": "Background & Experience",
+        "experience": [
+            {"role": "Data Scientist & ML Engineer", "company": "oeskn", "period": "Present", "desc": "Building AI-driven skincare solutions in a fast-paced startup environment."},
+            {"role": "Data Scientist", "company": "IGAC", "period": "3 years", "desc": "Applied data science and ML over complex geographical datasets."}
+        ],
+        "education": [
+            {"degree": "Magister en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
+            {"degree": "Matemático", "institution": "Universidad Nacional de Colombia", "year": "2010"}
+        ],
         "hero_greeting": "Hi, I'm Andres Campos",
         "hero_title_1": "Extracting Value from Data",
         "hero_title_2": "& Building ML / AI Systems.",
@@ -56,6 +65,15 @@ translations = {
         "nav_work": "Trabajo",
         "nav_connect": "Conectar",
         "badge_available": "Disponible para nuevos proyectos",
+        "section_background": "Trayectoria y Experiencia",
+        "experience": [
+            {"role": "Data Scientist & ML Engineer", "company": "oeskn", "period": "Actualmente", "desc": "Construyendo soluciones de skincare impulsadas por IA en un entorno de startup ágil."},
+            {"role": "Data Scientist", "company": "IGAC", "period": "3 años", "desc": "Aplicación de ciencia de datos y machine learning sobre datasets geográficos."}
+        ],
+        "education": [
+            {"degree": "Magíster en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
+            {"degree": "Matemático", "institution": "Universidad Nacional de Colombia", "year": "2010"}
+        ],
         "hero_greeting": "Hola, soy Andrés Campos",
         "hero_title_1": "Extrayendo Valor de los Datos",
         "hero_title_2": "y Construyendo Sistemas ML / IA.",
