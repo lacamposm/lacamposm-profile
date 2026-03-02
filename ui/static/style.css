@@ -401,6 +401,70 @@ a {
     font-size: 0.95rem;
 }
 
+/* BACKGROUND SECTION */
+.background-section {
+    padding: 140px 0;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-surface);
+}
+
+.background-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.col-title {
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 6px;
+    left: -29px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-base);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
 /* CTA BLOCK */
 .cta-section {
     padding: 140px 0;
@@ -616,6 +680,11 @@ footer {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .background-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
     }
 
     .cta-box {
