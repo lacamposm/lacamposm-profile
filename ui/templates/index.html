@@ -39,7 +39,10 @@
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text fade-up">
-                <div class="availability-badge">
+                <div class="hero-intro">
+                    <span class="greeting-text" style="font-family: 'Space Mono', monospace; color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 1rem;"><i class="fa-solid fa-code" style="margin-right: 8px;"></i>{{ hero_greeting }}</span>
+                </div>
+                <div class="availability-badge" style="margin-bottom: 2rem;">
                     <span class="status-indicator"></span> {{ badge_available }}
                 </div>
                 <h1 class="glitch" data-text="{{ hero_title_1 }}">

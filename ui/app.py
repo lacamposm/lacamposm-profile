@@ -16,6 +16,7 @@ translations = {
         "nav_work": "Work",
         "nav_connect": "Connect",
         "badge_available": "Available for new projects",
+        "hero_greeting": "Hi, I'm Andres Campos",
         "hero_title_1": "Extracting Value from Data",
         "hero_title_2": "& Building ML / AI Systems.",
         "hero_tagline": "I help organizations train robust machine learning models, analyze complex datasets, and deploy intelligent AI agents, supercharged by efficient cloud architectures.",
@@ -55,6 +56,7 @@ translations = {
         "nav_work": "Trabajo",
         "nav_connect": "Conectar",
         "badge_available": "Disponible para nuevos proyectos",
+        "hero_greeting": "Hola, soy Andrés Campos",
         "hero_title_1": "Extrayendo Valor de los Datos",
         "hero_title_2": "y Construyendo Sistemas ML / IA.",
         "hero_tagline": "Ayudo a las organizaciones a entrenar modelos de IA robustos, analizar datasets complejos y desplegar agentes autónomos, potenciados por arquitecturas en la nube.",
@@ -90,9 +92,9 @@ translations = {
 }
 
 @app.get('/', response_class=HTMLResponse)
-async def index(request: Request, lang: str = 'en'):
+async def index(request: Request, lang: str = 'es'):
     if lang not in ['en', 'es']:
-        lang = 'en'
+        lang = 'es'
     
     content = translations[lang].copy()
     content['current_lang'] = lang
