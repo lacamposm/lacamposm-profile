@@ -13,13 +13,13 @@ translations = {
         "title": "Andres Campos | Data Scientist & ML Engineer",
         "description": "I extract actionable insights from data and build intelligent AI systems, backed by scalable cloud infrastructure.",
         "nav_expertise": "Expertise",
-        "nav_work": "Work",
+        "nav_work": "History",
         "nav_connect": "Connect",
         "badge_available": "Available for new projects",
-        "section_background": "Background & Experience",
+        "section_background": "Professional History",
         "experience": [
             {"role": "AI Engineer", "company": "oeskn", "period": "Present", "desc": "Building AI-driven skincare solutions in a fast-paced startup environment."},
-            {"role": "Data Scientist", "company": "IGAC", "period": "3 years", "desc": "Designed and implemented ML models for geographic, cadastral, and spatial datasets at Colombia's national geographic institute."}
+            {"role": "Data Scientist", "company": "Instituto Geográfico Agustín Codazzi (IGAC)", "period": "3 years", "desc": "Designed and implemented ML models for geographic, cadastral, and spatial datasets."}
         ],
         "education": [
             {"degree": "Magister en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
@@ -32,7 +32,7 @@ translations = {
         "btn_discuss": "Discuss a Project",
         "btn_code": "Explore Code",
         "social_proof": "Trusted by clients for delivering accurate models and scalable data solutions.",
-        "expertise_title": "Specialized",
+        "expertise_title": "Technical",
         "expertise_subtitle": "Expertise",
         "expertise_desc": "Focused on the intersection of data science, machine learning, and autonomous agents.",
         "cta_title": "Ready to unlock your data's potential?",
@@ -61,14 +61,14 @@ translations = {
     "es": {
         "title": "Andrés Campos | Data Scientist & Machine Learning",
         "description": "Extraigo valor de los datos y construyo sistemas de IA inteligentes, respaldados por infraestructura en la nube escalable.",
-        "nav_expertise": "Experiencia",
-        "nav_work": "Trabajo",
+        "nav_expertise": "Habilidades",
+        "nav_work": "Trayectoria",
         "nav_connect": "Conectar",
         "badge_available": "Disponible para nuevos proyectos",
-        "section_background": "Trayectoria y Experiencia",
+        "section_background": "Trayectoria Profesional",
         "experience": [
             {"role": "AI Engineer", "company": "oeskn", "period": "Actualmente", "desc": "Construyendo soluciones de skincare impulsadas por IA en un entorno de startup ágil."},
-            {"role": "Data Scientist", "company": "IGAC", "period": "3 años", "desc": "Diseño e implementación de modelos de ML para datos geográficos, catastrales y espaciales en el instituto geográfico nacional de Colombia."}
+            {"role": "Data Scientist", "company": "Instituto Geográfico Agustín Codazzi (IGAC)", "period": "3 years", "desc": "Diseño e implementación de modelos de ML para datos geográficos, catastrales y espaciales."}
         ],
         "education": [
             {"degree": "Magíster en Ciencias - Matemáticas", "institution": "Universidad Nacional de Colombia", "year": "2014"},
@@ -81,8 +81,8 @@ translations = {
         "btn_discuss": "Discutir un Proyecto",
         "btn_code": "Explorar Código",
         "social_proof": "Confianza de clientes por entregar modelos precisos y arquitecturas sólidas.",
-        "expertise_title": "Experiencia",
-        "expertise_subtitle": "Especializada",
+        "expertise_title": "Dominios",
+        "expertise_subtitle": "Técnicos",
         "expertise_desc": "Centrado en la intersección de la ciencia de datos, machine learning y agentes autónomos.",
         "cta_title": "¿Listo para potenciar tus datos?",
         "cta_desc": "Construyamos modelos que generen valor para el negocio y sistemas que automaticen inteligentemente.",

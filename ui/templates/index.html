@@ -23,10 +23,20 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">AC</div>
-            <div class="nav-links">
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links-menu">
                 <a href="#expertise">{{ nav_expertise }}</a>
                 <a href="#background">{{ nav_work }}</a>
                 <a href="https://www.linkedin.com/in/lacamposm/" class="btn-solid" target="_blank">{{ nav_connect }}</a>
+                <div class="dropdown">
+                    <button class="dropbtn" id="projects-dropbtn">{{ 'Projects' if current_lang == 'en' else 'Proyectos' }} <i
+                            class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="https://www.lacamposm.com" target="_blank">lacamposm.com</a>
+                    </div>
+                </div>
                 <div class="lang-toggle">
                     <a href="/?lang=en" class="{% if current_lang == 'en' %}active{% endif %}">EN</a>
                     <span class="separator">/</span>
@@ -226,6 +236,42 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a:not(.dropbtn)').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Handle dropdown on mobile (click instead of hover)
+        const projectsBtn = document.getElementById('projects-dropbtn');
+        const dropdown = projectsBtn.parentElement;
+        
+        projectsBtn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('mobile-open');
+            }
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
