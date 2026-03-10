@@ -31,10 +31,10 @@
                 <a href="#background">{{ nav_work }}</a>
                 <a href="https://www.linkedin.com/in/lacamposm/" class="btn-solid" target="_blank">{{ nav_connect }}</a>
                 <div class="dropdown">
-                    <button class="dropbtn" id="projects-dropbtn">{{ 'Projects' if current_lang == 'en' else 'Proyectos' }} <i
-                            class="fa fa-caret-down"></i></button>
+                    <button class="dropbtn" id="projects-dropbtn">{{ 'Projects' if current_lang == 'en' else 'Proyectos'
+                        }} <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="https://www.lacamposm.com" target="_blank">lacamposm.com</a>
+                        <a href="https://electoria.lacamposm.com/" target="_blank">ElectorIA</a>
                     </div>
                 </div>
                 <div class="lang-toggle">
@@ -240,7 +240,7 @@
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.getElementById('nav-links-menu');
-        
+
         menuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = menuBtn.querySelector('i');
@@ -253,19 +253,10 @@
             }
         });
 
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a:not(.dropbtn)').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuBtn.querySelector('i').classList.remove('fa-times');
-                menuBtn.querySelector('i').classList.add('fa-bars');
-            });
-        });
-
         // Handle dropdown on mobile (click instead of hover)
         const projectsBtn = document.getElementById('projects-dropbtn');
         const dropdown = projectsBtn.parentElement;
-        
+
         projectsBtn.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
